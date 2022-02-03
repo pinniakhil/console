@@ -60,15 +60,6 @@ export default function Login() {
                     Forgot password?
                   </a>
                 </div>
-                <div className="mb-2">
-                  <button
-                    type="button"
-                    className="btn btn-block btn-facebook auth-form-btn"
-                  >
-                    <i className="mdi mdi-facebook mr-2"></i>Connect using
-                    facebook
-                  </button>
-                </div>
                 <div className="text-center mt-4 font-weight-light">
                   Don&apos;t have an account?{" "}
                   <Link to="/registration-page" className="text-primary">
