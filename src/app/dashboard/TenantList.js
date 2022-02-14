@@ -110,39 +110,43 @@ export default function TenantList() {
                 </thead>
                 <tbody>
                   {tenantList &&
-                    tenantList.map((val, i) => (
-                      <tr key={i}>
-                        <td>{val.userid}</td>
-                        <td>{val.description}</td>
-                        <td>
-                          <div className="btn-group" role="group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-success"
-                              onClick={() => {
-                                setTenant(val);
-                                setModalShow(true);
-                              }}
-                            >
-                              <i className="mdi mdi-sync"></i>
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-danger"
-                              onClick={() => deleteTenant(val.id)}
-                            >
-                              <i className="mdi mdi-delete"></i>
-                            </button>
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-dark"
-                            >
-                              <i className="mdi mdi-settings"></i>
-                            </button>
-                          </div>
-                        </td>
-                      </tr>
-                    ))}
+                    tenantList.map((val, i) => {
+                      if (val.type === "tenant") {
+                        return (
+                          <tr key={i}>
+                            <td>{val.userid}</td>
+                            <td>{val.description}</td>
+                            <td>
+                              <div className="btn-group" role="group">
+                                <button
+                                  type="button"
+                                  className="btn btn-sm btn-success"
+                                  onClick={() => {
+                                    setTenant(val);
+                                    setModalShow(true);
+                                  }}
+                                >
+                                  <i className="mdi mdi-sync"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="btn btn-sm btn-danger"
+                                  onClick={() => deleteTenant(val.id)}
+                                >
+                                  <i className="mdi mdi-delete"></i>
+                                </button>
+                                <button
+                                  type="button"
+                                  className="btn btn-sm btn-dark"
+                                >
+                                  <i className="mdi mdi-settings"></i>
+                                </button>
+                              </div>
+                            </td>
+                          </tr>
+                        );
+                      }
+                    })}
                 </tbody>
               </table>
             </div>
