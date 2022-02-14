@@ -41,7 +41,9 @@ export default function TenantList() {
     }
   };
   const deleteTenant = async (id) => {
-    client.delete(`/${id}`);
+    client.delete(`/${id}`).then(() => {
+      mainCall();
+    });
     toast.error("Tenant Removed", {
       position: "top-right",
       autoClose: 1500,
@@ -49,7 +51,6 @@ export default function TenantList() {
       closeOnClick: true,
       draggable: true,
     });
-    await mainCall();
   };
 
   const updateTenant = async () => {
@@ -79,7 +80,9 @@ export default function TenantList() {
       let updated = {
         ...tenant,
       };
-      client.put(`${tenant.id}`, updated);
+      client.put(`${tenant.id}`, updated).then(() => {
+        mainCall();
+      });
       setModalShow(false);
       toast.success("Tenant Details Update", {
         position: "top-right",
@@ -88,7 +91,6 @@ export default function TenantList() {
         closeOnClick: true,
         draggable: true,
       });
-      await mainCall();
     }
   };
   return (

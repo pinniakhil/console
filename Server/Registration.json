@@ -2,7 +2,7 @@
   "Registration": [
     {
       "name": "Deepthi",
-      "description": "i am smart",
+      "description": "i am smartest",
       "userid": "deepthi123",
       "email": "deepthi@gmail.com",
       "password": "deepthi",
@@ -46,22 +46,22 @@
       "id": 8
     },
     {
-      "name": "Amruta khamaar",
-      "description": "I am beauty with brain",
-      "userid": "amruta123",
-      "email": "amruta123@gmail.com",
-      "password": "amruta123",
-      "type": "tenant",
-      "id": 9
-    },
-    {
       "name": "Paras Saxena",
-      "description": "i am a hacker",
+      "description": "I am a Master hacker ",
       "userid": "paras72727",
       "email": "parassaxena206@gmail.com",
       "password": "parassaxena206",
       "type": "tenant",
       "id": 10
+    },
+    {
+      "name": "Rohit singh",
+      "description": "i am pro gamer",
+      "userid": "rohit123",
+      "email": "rohit@gmail.com",
+      "password": "rohit",
+      "type": "tenant",
+      "id": 11
     }
   ]
 }
